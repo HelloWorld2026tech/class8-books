@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    margin-bottom: 15px;
+}
+
+.hero p:last-child {
+    font-size: 19px;
+    opacity: 0.95;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #6b7280;
+    font-size: 17px;
+}
+
+/* =========================
+   SUBJECT CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.subject-card {
+    text-decoration: none;
+    color: #1f2937;
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.subject-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.13);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.subject-card h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subject-card p {
+    color: #6b7280;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.subject-card span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.maths-card {
+    border-top: 6px solid #4f46e5;
+}
+
+.maths-card span {
+    color: #4f46e5;
+}
+
+.science-card {
+    border-top: 6px solid #059669;
+}
+
+.science-card span {
+    color: #059669;
+}
+
+/* =========================
+   COMMON PAGE HEADER
+========================= */
+
+.page-header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.page-header.science-header {
+    background: linear-gradient(135deg, #047857, #059669, #0d9488);
+}
+
+.page-header h1 {
+    font-size: clamp(34px, 6vw, 58px);
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.page-container {
+    width: min(1150px, 94%);
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-intro h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.page-intro p {
+    color: #6b7280;
+}
+
+/* =========================
+   MATHS VERSION CARDS
+========================= */
+
+.version-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.version-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-decoration: none;
+    color: #1f2937;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.version-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.version-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.version-card p {
+    color: #6b7280;
+}
+
+.version-card span {
+    display: inline-block;
+    margin-top: 18px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-gutter: stable;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.table-wrapper::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 10px;
+}
+
+.chapter-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+.chapter-table th {
+    background: #4f46e5;
+    color: white;
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.chapter-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+
+.chapter-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.chapter-table tbody tr:hover {
+    background: #f3f4ff;
+}
+
+.chapter-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.chapter-number {
+    font-weight: bold;
+    color: #4f46e5;
+    width: 100px;
+}
+
+.pdf-link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pdf-link:hover {
+    text-decoration: underline;
+}
+
+/* Science table */
+
+.science-table th {
+    background: #059669;
+}
+
+.science-table tbody tr:hover {
+    background: #ecfdf5;
+}
+
+.science-table .chapter-number {
+    color: #059669;
+}
+
+.science-table .pdf-link {
+    color: #059669;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p:last-child {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 45px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-card {
+        padding: 30px;
+        min-height: 240px;
+    }
+
+    .welcome h2 {
+        font-size: 28px;
+    }
+
+    .version-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        padding: 45px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+    .page-container {
+        padding: 35px 0;
+    }
+
+    .chapter-table {
+        min-width: 650px;
+    }
+
+    .chapter-table th,
+    .chapter-table td {
+        padding: 15px;
+    }
+}
+
+/* Accessibility */
+
+a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Skip Link */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 9999;
+    padding: 10px 14px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
